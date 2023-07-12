@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sergeykrivtsov/static/css/main.530b7154.css",
+    "main.js": "/sergeykrivtsov/static/js/main.da42a24e.js",
+    "index.html": "/sergeykrivtsov/index.html",
+    "main.530b7154.css.map": "/sergeykrivtsov/static/css/main.530b7154.css.map",
+    "main.da42a24e.js.map": "/sergeykrivtsov/static/js/main.da42a24e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.530b7154.css",
+    "static/js/main.da42a24e.js"
+  ]
+}
