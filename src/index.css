@@ -39,6 +39,11 @@ a {
   text-decoration: underline;
 }
 
+header nav li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
