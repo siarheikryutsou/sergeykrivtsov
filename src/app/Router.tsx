@@ -13,6 +13,7 @@ import {gitPagesEntryPath} from "../shared/consts";
 const Router = () => {
     function onGitPages() {
         const hash:string = window.location.hash.slice(1);
+        debugger
         return hash ? <Navigate to={`/${hash}`} /> : <PageMain />;
     }
 
