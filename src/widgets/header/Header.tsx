@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./styles.module.css";
+import {gitPagesEntryPath, isGitPages} from "../../shared/consts";
 
 
 const Header = () => {
     return (
         <header>
             <nav>
-                <Link className={styles.logo} to="/">Siarhei Kryutsou</Link>
+                <Link className={styles.logo} to={isGitPages() ? `/${gitPagesEntryPath}` : "/"}>Siarhei Kryutsou</Link>
                 <ul>
                     <li>
                         <Link to="/bio">Bio</Link>
