@@ -7,26 +7,33 @@ import PageArticle from "../pages/blog-article/PageArticle";
 import PageContacts from "../pages/contacts/PageContacts";
 import PageCV from "../pages/cv/PageCV";
 import PageRecommendations from "../pages/recommendations/PageRecommendations";
-import {gitPagesEntryPath} from "../shared/consts";
+import {getRoutePath} from "../shared/consts";
+import {ReactElement} from "react";
 
 
 const Router = () => {
-    function onGitPages() {
-        const hash:string = window.location.hash.slice(1);
-        debugger
-        return hash ? <Navigate to={`/${hash}`} /> : <PageMain />;
+
+
+    type Routes = {
+        path:string,
+        element: ReactElement
     }
+
+    const routes:Array<Routes> = [
+        {path: getRoutePath("/"), element: <PageMain />},
+        {path: getRoutePath("/bio"), element: <PageBio />},
+        {path: getRoutePath("/blog"), element: <PageBlog />},
+        {path: getRoutePath("/blog/:id"), element: <PageArticle />},
+        {path: getRoutePath("/contacts"), element: <PageContacts />},
+        {path: getRoutePath("/cv"), element: <PageCV />},
+        {path: getRoutePath("/recommendations"), element: <PageRecommendations />},
+    ];
 
     return (
         <Routes>
-            <Route path="/" element={<PageMain />} />
-            <Route path="/bio" element={<PageBio />} />
-            <Route path="/blog" element={<PageBlog />} />
-            <Route path="/blog/:id" element={<PageArticle />} />
-            <Route path="/contacts" element={<PageContacts />} />
-            <Route path="/cv" element={<PageCV />} />
-            <Route path="/recommendations" element={<PageRecommendations />} />
-            <Route path={`/${gitPagesEntryPath}`} element={onGitPages()} />
+            {routes.map((el) => {
+                return <Route key={el.path} path={el.path} element={el.element} />
+            })}
             <Route path="*" element={<Page404 />} />
         </Routes>
     );

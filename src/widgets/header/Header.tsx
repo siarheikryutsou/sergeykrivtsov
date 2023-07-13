@@ -1,33 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./styles.module.css";
-import {gitPagesEntryPath, isGitPages} from "../../shared/consts";
+import {getRoutePath} from "../../shared/consts";
 
 
 const Header = () => {
     return (
         <header>
             <nav>
-                <Link className={styles.logo} to={isGitPages() ? `/${gitPagesEntryPath}` : "/"}>Siarhei Kryutsou</Link>
+                <Link className={styles.logo} to={getRoutePath("/")}>Siarhei Kryutsou</Link>
                 <ul>
                     <li>
-                        <Link to="/bio">Bio</Link>
+                        <Link to={getRoutePath("/bio")}>Bio</Link>
                     </li>
 
                     <li>
-                        <Link to="/cv">CV</Link>
+                        <Link to={getRoutePath("/cv")}>CV</Link>
                     </li>
 
                     <li>
-                        <Link to="/recommendations">Recommendations</Link>
+                        <Link to={getRoutePath("/recommendations")}>Recommendations</Link>
                     </li>
 
                     <li>
-                        <Link to="/contacts">Contacts</Link>
+                        <Link to={getRoutePath("/contacts")}>Contacts</Link>
                     </li>
 
                     <li>
-                        <Link to="/blog">Blog</Link>
+                        <Link to={getRoutePath("/blog")}>Blog</Link>
                     </li>
                 </ul>
             </nav>
