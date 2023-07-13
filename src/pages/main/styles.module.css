@@ -1,0 +1,15 @@
+.pageMain {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mainHeading {
+    font-size: 5em;
+}
+
+.mainHeadingSub {
+    max-width: 600px;
+    font-size: 1.2em;
+    line-height: 2em;
+}

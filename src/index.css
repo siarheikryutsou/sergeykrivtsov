@@ -1,14 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 :root {
   --bg: white;
   --color-text-primary: #1e1f22;
+  --header-height: 70px;
+  --body-padding-x: 5rem;
+  --font-primary: 'Montserrat', sans-serif;
+  --color-header-splitter: rgba(0, 0, 0, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #1e1f22;
     --color-text-primary: white;
+    --color-header-splitter: rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -24,19 +29,53 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5 {
-  margin-bottom: .3em;
-}
-
 body {
   color: var(--color-text-primary);
   background: var(--bg);
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-primary);
+  padding: var(--header-height) var(--body-padding-x) 0;
+  height: 100vh;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#root, main {
+  height: 100%;
+}
+
+main {
+  min-height: 400px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: .3em;
 }
 
 a {
   color: inherit;
   text-decoration: underline;
+}
+
+header {
+  position: fixed;
+  height: var(--header-height);
+  border-bottom: 1px var(--color-header-splitter) solid;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 var(--body-padding-x);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+header nav a {
+  text-decoration: none;
 }
 
 header nav ul {

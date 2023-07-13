@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from "./styles.module.css";
+
 
 const Header = () => {
     return (
         <header>
             <nav>
+                <Link className={styles.logo} to="/">Siarhei Kryutsou</Link>
                 <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-
                     <li>
                         <Link to="/bio">Bio</Link>
                     </li>
@@ -31,6 +30,7 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+            <div className={styles.bg}></div>
         </header>
     );
 };
