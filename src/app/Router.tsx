@@ -11,9 +11,10 @@ import PageRecommendations from "../pages/recommendations/PageRecommendations";
 
 const Router = () => {
 
-    function onGitPages():string {
+    const gitPagesPath:string = "sergeykrivtsov";
+    function onGitPages() {
         const hash:string = window.location.hash.slice(1);
-        return hash ? `/${hash}` : "/";
+        return hash ? <Navigate to={`/${hash}`} /> : <PageMain />;
     }
 
     return (
@@ -25,7 +26,7 @@ const Router = () => {
             <Route path="/contacts" element={<PageContacts />} />
             <Route path="/cv" element={<PageCV />} />
             <Route path="/recommendations" element={<PageRecommendations />} />
-            <Route path="/sergeykrivtsov" element={<Navigate to={onGitPages()} />} />
+            <Route path={`/${gitPagesPath}`} element={onGitPages()} />
             <Route path="*" element={<Page404 />} />
         </Routes>
     );
