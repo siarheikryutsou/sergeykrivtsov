@@ -20,6 +20,7 @@ const Router = () => {
             <Route path="/contacts" element={<PageContacts />} />
             <Route path="/cv" element={<PageCV />} />
             <Route path="/recommendations" element={<PageRecommendations />} />
+            <Route path="/sergeykrivtsov" element={<PageMain />} />
             <Route path="*" element={<Page404 />} />
         </Routes>
     );

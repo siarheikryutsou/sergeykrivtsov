@@ -39,7 +39,12 @@ a {
   text-decoration: underline;
 }
 
-header nav li {
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
   display: inline-block;
   margin-right: 16px;
 }
