@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import styles from "./styles.module.css";
 import {getRoutePath} from "../../shared/consts";
+import LngSelect from "../../shared/ui/lng-select/LngSelect";
+import {ContextLng} from "../../app/ContextLng";
 
 
 const Header = () => {
+    const {translations} = useContext(ContextLng);
+    
     return (
         <header>
+            <LngSelect />
             <nav>
-                <Link className={styles.logo} to={getRoutePath("/")}>Siarhei Kryutsou</Link>
+                <Link className={styles.logo} to={getRoutePath("/")}>{translations?.myName}</Link>
                 <ul>
                     <li>
                         <Link to={getRoutePath("/bio")}>Bio</Link>
