@@ -18,7 +18,7 @@ const PageMain = () => {
                 <p className={styles.mainHeadingSub}>{translations?.mainDescription}</p>
             </article>
             <article>
-                <img className={styles.photo} src="/imgs/me.jpg" alt="Siarhei Kryutsou" />
+                <img className={styles.photo} src="/me.jpg" alt="Siarhei Kryutsou" />
             </article>
         </div>
     );

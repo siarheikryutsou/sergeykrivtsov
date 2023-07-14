@@ -8,7 +8,7 @@ import {ContextLng} from "../../app/ContextLng";
 
 const Header = () => {
     const {translations} = useContext(ContextLng);
-    
+
     return (
         <header>
             <LngSelect />
