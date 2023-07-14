@@ -1,4 +1,4 @@
-import {Navigate, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import PageMain from "../pages/main/PageMain";
 import Page404 from "../pages/404/Page404";
 import PageBio from "../pages/bio/PageBio";
