@@ -1,7 +1,20 @@
 .pageMain {
     height: 100%;
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+}
+
+.headingArticle {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mainHeading {

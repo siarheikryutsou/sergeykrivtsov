@@ -7,6 +7,7 @@
   --body-padding-x: 5rem;
   --font-primary: 'Montserrat', sans-serif;
   --color-header-splitter: rgba(0, 0, 0, 0.2);
+  --header-bg-color: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,6 +15,7 @@
     --bg: #1e1f22;
     --color-text-primary: white;
     --color-header-splitter: rgba(255, 255, 255, 0.08);
+    --header-bg-color: rgba(40, 40, 40, .15);
   }
 }
 
