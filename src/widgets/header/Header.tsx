@@ -40,7 +40,9 @@ const Header = () => {
                         </ul>
                     </nav>
                     <LngSelect />
-                    <button className={styles.buttonDownloadCV}>Download CV</button>
+                    <a href="Siarhei_Kryutsou_Front_End_Developer.pdf" download>
+                        <button className={styles.buttonDownloadCV}>Download CV</button>
+                    </a>
                 </div>
             </div>
             <div className={styles.bg}></div>
