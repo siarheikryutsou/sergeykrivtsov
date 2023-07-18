@@ -2,7 +2,10 @@
 
 :root {
   --bg: white;
-  --color-text-primary: #1e1f22;
+  --color-text-primary-bright: white;
+  --color-text-primary-dark: #1e1f22;
+  --color-text-primary: var(--color-text-primary-dark);
+  --color-text-primary-reverse: var(--color-text-primary-bright);
   --header-height: 70px;
   --body-padding-x: 5rem;
   --font-primary: 'Montserrat', sans-serif;
@@ -14,7 +17,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #1e1f22;
-    --color-text-primary: white;
+    --color-text-primary: var(--color-text-primary-bright);
+    --color-text-primary-reverse: var(--color-text-primary-dark);
     --color-header-splitter: rgba(255, 255, 255, 0.08);
     --header-bg-color: rgba(40, 40, 40, .15);
   }

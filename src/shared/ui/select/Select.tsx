@@ -12,11 +12,12 @@ interface ISelect {
     defaultValue?:string,
     options:IOptionSelect[],
     value:string,
+    title?:string,
     onChange:Function | null
     onSelectRef?: (element: HTMLSelectElement | null) => void;
 }
 
-const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, onChange, onSelectRef}) => {
+const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, title, onChange, onSelectRef}) => {
 
     return (
         <>
@@ -25,6 +26,7 @@ const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, onC
                 id={id}
                 name = {name}
                 value = {value}
+                title={title}
                 onChange={event => onChange?.(event.target.value)}
             >
                 {defaultValue ? <option selected disabled value="">{defaultValue}</option> : null }

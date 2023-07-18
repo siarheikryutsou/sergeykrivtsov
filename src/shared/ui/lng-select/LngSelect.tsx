@@ -6,12 +6,13 @@ import styles from "./styles.module.css";
 
 const LngSelect:FC = () => {
 
-    const {selectedLng, languages, onLanguageChanged} = useContext(ContextLng);
+    const {selectedLng, translations, languages, onLanguageChanged} = useContext(ContextLng);
 
     return (
         <div className={styles.select}>
             <Select id="lng-select"
                     value={selectedLng}
+                    title={translations?.titleChangeLanguage}
                     onChange={onLanguageChanged || null}
                     options={Object.keys(languages).map(key => {
                         return {
@@ -22,10 +23,10 @@ const LngSelect:FC = () => {
                     }
             />
             <button
-                className={styles.lngButton}
+                className={`${styles.lngButton} ${styles[selectedLng]}`}
                 tabIndex={-1}
             >
-                {selectedLng}
+
             </button>
         </div>
     );

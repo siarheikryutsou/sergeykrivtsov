@@ -12,6 +12,27 @@
     left: 0;
     right: 0;
     transition: 400ms ease-in-out;
+    font-size: 1em;
+    color: var(--color-text-primary-reverse);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lngButton.en {
+    background-image: url(../../../../public/en.svg);
+}
+
+.lngButton.ru {
+    background-image: url(../../../../public/ru.svg);
+}
+
+.lngButton.uk {
+    background-image: url(../../../../public/uk.svg);
+}
+
+.lngButton.sr {
+    background-image: url(../../../../public/sr.svg);
 }
 
 .lngButton, .select select {
