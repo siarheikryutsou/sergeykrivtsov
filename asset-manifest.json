@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/sergeykrivtsov/static/css/main.3d551ecd.css",
-    "main.js": "/sergeykrivtsov/static/js/main.9dd6d0af.js",
+    "main.css": "/sergeykrivtsov/static/css/main.dab84ee9.css",
+    "main.js": "/sergeykrivtsov/static/js/main.27d2da50.js",
+    "static/media/sr.svg": "/sergeykrivtsov/static/media/sr.d739adb78c4c6a78a7eb.svg",
     "index.html": "/sergeykrivtsov/index.html",
-    "main.3d551ecd.css.map": "/sergeykrivtsov/static/css/main.3d551ecd.css.map",
-    "main.9dd6d0af.js.map": "/sergeykrivtsov/static/js/main.9dd6d0af.js.map"
+    "static/media/en.svg": "/sergeykrivtsov/static/media/en.516897fd3988e35032b7.svg",
+    "static/media/ru.svg": "/sergeykrivtsov/static/media/ru.7e04b988972d41f5c369.svg",
+    "static/media/uk.svg": "/sergeykrivtsov/static/media/uk.423c68f9fb154fb2749b.svg",
+    "main.dab84ee9.css.map": "/sergeykrivtsov/static/css/main.dab84ee9.css.map",
+    "main.27d2da50.js.map": "/sergeykrivtsov/static/js/main.27d2da50.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d551ecd.css",
-    "static/js/main.9dd6d0af.js"
+    "static/css/main.dab84ee9.css",
+    "static/js/main.27d2da50.js"
   ]
 }
