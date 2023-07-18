@@ -8,7 +8,7 @@
   --font-primary: 'Montserrat', sans-serif;
   --color-header-splitter: rgba(0, 0, 0, 0.2);
   --header-bg-color: transparent;
-  --hover-glow: 0 0 5px 0 var(--color-text-primary);
+  --hover-box-shadow: 0 0 5px 0 var(--color-text-primary);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,12 +66,14 @@ button {
   border: 2px solid var(--color-text-primary);
   border-radius: 8px;
   padding: 8px 12px;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
 }
 
-button:hover {
-  box-shadow: var(--hover-glow);
+button:hover,
+button:focus {
+  box-shadow: var(--hover-box-shadow);
 }
-
 
 @media (prefers-color-scheme: dark) {
   html {

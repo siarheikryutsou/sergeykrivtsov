@@ -11,6 +11,7 @@
     user-select: none;
     left: 0;
     right: 0;
+    transition: 400ms ease-in-out;
 }
 
 .lngButton, .select select {
@@ -21,7 +22,7 @@
 
 .select select:hover + .lngButton,
 .select select:focus + .lngButton {
-    box-shadow: var(--hover-glow);
+    box-shadow: var(--hover-box-shadow);
 }
 
 .select {
