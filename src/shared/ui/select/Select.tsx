@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useRef} from 'react';
 
 interface IOptionSelect {
     value:string,
@@ -13,9 +13,16 @@ interface ISelect {
     options:IOptionSelect[],
     value:string,
     onChange:Function | null
+    onSelectRef?: (element: HTMLSelectElement | null) => void;
 }
 
-const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, onChange}) => {
+const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, onChange, onSelectRef}) => {
+    const selectRef = useRef(null);
+
+    useEffect(() => {
+        onSelectRef?.(selectRef.current);
+    }, [onSelectRef]);
+
     return (
         <>
             {label ? <label htmlFor={id}>{label}</label> : null}
@@ -24,6 +31,7 @@ const Select: FC<ISelect> = ({id, name, label, defaultValue, options, value, onC
                 name = {name}
                 value = {value}
                 onChange={event => onChange?.(event.target.value)}
+                ref={selectRef}
             >
                 {defaultValue ? <option selected disabled value="">{defaultValue}</option> : null }
                 {options.map(option =>

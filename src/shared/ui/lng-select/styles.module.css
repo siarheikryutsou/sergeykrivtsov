@@ -1,0 +1,41 @@
+.lngButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--color-text-primary);
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    user-select: none;
+    left: 0;
+    right: 0;
+}
+
+.lngButton, .select select {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.select select:hover + .lngButton,
+.select select:focus + .lngButton {
+    box-shadow: var(--hover-glow);
+}
+
+.select {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.select select {
+    opacity: 0;
+    left: -16px;
+    right: -16px;
+}
+
+.select select option {
+
+}
