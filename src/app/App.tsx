@@ -13,6 +13,7 @@ function App() {
     const initialingLng:string = localStorage.getItem("lng") || getSystemLng() || defaultLng;
     const [translations, setTranslations] = useState<TypeTranslations | null>(null);
     const [selectedLng, setSelectedLng] = useState(initialingLng);
+    const [isLoading, setIsLoading] = useState(true);
 
     function getSystemLng():string {
         const navigatorLng:string = navigator.language.substring(0, 2).toLowerCase();
@@ -27,6 +28,7 @@ function App() {
         const json:TypeTranslations = await response.json();
         setTranslations(json);
         setSelectedLng(lng);
+        setIsLoading(false);
     }
 
 
@@ -40,22 +42,27 @@ function App() {
         // eslint-disable-next-line
     }, []);
 
+    console.log("sex")
+
     return (
         <>
-            <ContextLng.Provider value={{
-                selectedLng,
-                languages,
-                translations,
-                onLanguageChanged
-            }}>
-            <BrowserRouter>
-                <Header/>
-                <main>
-                    <Router/>
-                </main>
+            { isLoading
+                ? <h1>Loading</h1>
+                : <ContextLng.Provider value={{
+                    selectedLng,
+                    languages,
+                    translations,
+                    onLanguageChanged
+                }}>
+                    <BrowserRouter>
+                        <Header/>
+                        <main>
+                            <Router/>
+                        </main>
 
-            </BrowserRouter>
-            </ContextLng.Provider>
+                    </BrowserRouter>
+                </ContextLng.Provider>
+            }
         </>
     );
 }
